@@ -7,7 +7,7 @@
         body{
             position: relative;
         }
-        .circle{
+        .circle {
             width: 100px;
             height: 100px;
             background: red;
@@ -31,63 +31,14 @@
         }
 
     </style>
-    <script src="../xampp/htdocs/circle/search-js/js/script.js"></script>
+
 
 </head>
 <body>
-<button onclick="circleShow()">open</button>
-<div id="wrapper">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+<button id="openButton" >open</button>
+<button id="openHide">hide</button>
+<div id="wrapper"></div>
 
-</div>
-
-<script type="text/javascript">
-    var circleNumber = [1,2,3,4,5,6,7,9,10,11,12];
-    var step = Math.PI / 6;
-    var radius = 300;
-    var  circles = document.querySelectorAll(".circle");
-
-    function circleShow() {
-        var i = 0;
-        setInterval(function () {
-            circles.forEach(function (circles, index) {
-                console.log(circles, index);
-                circles.style.left =  radius * Math.cos(step * index+i) + 'px';
-                circles.style.top =  radius * Math.sin(step * index+i) + 'px';
-
-            });
-            i+=0.05
-        },200);
-
-    }
-    function createCircle() {
-        var circle = document.createElement('div');
-        var  wrapper = document.getElementById("wrapper");
-        wrapper.appendChild(circle);
-        circle.setAttribute('class', 'circle');
-        circleNumber.forEach(function (t) {
-
-        })
-    }
-    createCircle();
-
-
-
-
-
-
-
-</script>
+<script src="./main.js" type="text/javascript"></script>
 </body>
 </html>
